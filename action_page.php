@@ -22,8 +22,6 @@ $email=$_POST["email"];
 $memail = $_ENV["EML"]; 
 $mpass =  $_ENV['PWDD'];
 function reCaptcha($recaptcha, $secret){
-  //echo $secret;
-  //$postvars = array("secret"=>$secret, "response"=>$recaptcha);
   $postvars="secret={$secret}&response={$recaptcha}";
   $url = "https://hcaptcha.com/siteverify";
   $ch = curl_init();
@@ -33,7 +31,6 @@ function reCaptcha($recaptcha, $secret){
   curl_setopt($ch, CURLOPT_POSTFIELDS, $postvars);
   $data = curl_exec($ch);
   curl_close($ch);
- // echo $data;
   return json_decode($data, true);
 }
 
@@ -55,21 +52,12 @@ if (curl_errno($ch)) {
     echo 'Error:' . curl_error($ch);
 }
 curl_close($ch);
-//echo $result;
 if (strcmp($result,"User already exists.")==0){
 echo "Dude, User already exists";
 }else{
 echo "Email Successfully Created.";
 echo "<a href='/mail/'> click here to go to login page </a>";
-//$filename=$_SERVER['DOCUMENT_ROOT']."/r_users.text";
-//$myfile = fopen($filename, "a+");
-//if ($myfile === false) {
-//  echo "opening '$myfile' failed";
-//}
-//fwrite($myfile, $email . "   ".  strval($ip)."\n");
-//fclose($myfile);
-//header("Location: https://salvusmail.com/mail");
-}
+
 
 ?>
 
