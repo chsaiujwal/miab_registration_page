@@ -7,16 +7,19 @@ Just a simple registraiton page with a hcaptcha, using Mail-In-A-Box's in-build 
 ## Installation:
 
 1. Clone the files into your website directory (Your website directory is `/home/user-data/www/default`)
-2. edit line numbers 195, 200 (pattern), 214 (data-sitekey) in register.html 
-3. edit line 40 (api) in action_page.php
-4. create a file .env in `/home/user-data/www` and save your admin accout creds and captcha secret key in it, make sure format is like this:
+2. Edit line numbers 195, 200 (pattern), 214 (data-sitekey) in register.html 
+3. Edit line 40 (api) in action_page.php
+4. Create a file .env in `/home/user-data/www` and save your admin accout creds and captcha secret key in it, make sure format is like this:
 ```
 PWDD="PASSWORD_HERE"
 EML="EMAILHERE@domain.com"
 SEC="hCaptcha secret key here"
 ```
-5. make sure you have composer installed, run `composer install` in website directory.
+5. Make sure you have composer installed, run `composer install` in website directory.
 
-done, that's it.
+Done, that's it.
 
-if its not working, make sure you enabled php.
+If its not working, make sure you enabled php.
+
+
+Feel free to submit issues and pull requests.
