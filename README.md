@@ -16,3 +16,7 @@ EML="EMAILHERE@domain.com"
 SEC="hCaptcha secret key here"
 ```
 5. make sure you have composer installed, run `composer install` in website directory.
+
+done, that's it.
+
+if its not working, make sure you enabled php.
