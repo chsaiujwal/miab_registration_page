@@ -1,4 +1,4 @@
-# miab_registration_page
-registration page for mail-in-a-box
-
+# Main-In-A-Box registration page
 source code of https://salvusmail.com/register.html page.
+
+
